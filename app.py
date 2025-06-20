@@ -16,8 +16,8 @@ with st.form("input_form"):
     GrLivArea = st.number_input("Luas Ruangan Utama (Ground Living Area / sqft)", min_value=100, max_value=5000, value=1500)
     GarageCars = st.selectbox("Jumlah Mobil yang Bisa Masuk Garasi", options=[0, 1, 2, 3, 4])
     TotalBsmtSF = st.number_input("Luas Basement (Total Basement Area / sqft)", min_value=0, max_value=3000, value=800)
-    YearBuilt = st.slider("Tahun Dibangun", 1900, 2024, 2000)
-    FullBath = st.selectbox("Jumlah Kamar Mandi Penuh", options=[0, 1, 2, 3])
+    YearBuilt = st.number_input("Tahun Dibangun (1800-2024)", min_value=1800, max_value=2024, value=2000)
+    FullBath = st.selectbox("Jumlah Kamar Mandi", options=[0, 1, 2, 3])
     BedroomAbvGr = st.selectbox("Jumlah Kamar Tidur", options=[0, 1, 2, 3, 4, 5])
     Neighborhood = st.selectbox("Lingkungan (Neighborhood)", options=[
         'NAmes', 'CollgCr', 'OldTown', 'Edwards', 'Somerst',
